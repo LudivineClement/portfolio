@@ -543,17 +543,19 @@ li {
   background-attachment: fixed;
   filter: brightness(1.5);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
   color: #fafafa;
 }
 
 .section_cv p {
   font-size: 1.7rem;
   color: #fafafa;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   filter: blur(0.5px);
+  text-align: center;
 }
 
 .section_cv span {
@@ -568,12 +570,15 @@ li {
 .section_cv button {
   border: 2px transparent solid;
   background-color: #d68da2;
-  padding: 15px;
-  font-size: 1.1rem;
+  padding: 10px 15px;
+  font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in;
   text-transform: uppercase;
+  font-weight: bold;
+  color: #292929;
+  letter-spacing: 1px;
 }
 
 .section_content button:hover {
@@ -710,7 +715,7 @@ textarea,
   margin-bottom: 40px;
 }
 
-.form button {
+#contact .form .btn_form {
   background-color: transparent;
   border: none;
   text-transform: uppercase;
@@ -727,7 +732,7 @@ textarea,
   font-family: "Poppins", sans-serif;
 }
 
-.form button:hover {
+#contact .form .btn_form:hover {
   box-shadow: inset 0 -15px 0 #f3b0c3;
 }
 
