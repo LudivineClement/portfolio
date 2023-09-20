@@ -385,7 +385,8 @@ li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  row-gap: 30px;
+  column-gap: 20px;
   padding-right: 50px;
 }
 
@@ -464,10 +465,12 @@ li {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 40px;
   grid-row-gap: 50px;
   margin: 0 auto;
+
+  
 }
 
 .project {
@@ -476,6 +479,7 @@ li {
   position: relative;
   overflow: hidden;
   height: 400px;
+  
 }
 
 .project img {
@@ -483,10 +487,14 @@ li {
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%);
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+ 
 }
 
 .project:hover img {
   filter: none;
+  transform: scale(1.05);
 }
 
 .bloc-content-show {
@@ -499,6 +507,7 @@ li {
   padding: 15px;
   transition: all 0.4s ease-in-out, bottom 0.4s ease-in-out;
   opacity: 0.9;
+ 
 }
 
 .project:hover .bloc-content-show {
@@ -561,10 +570,6 @@ li {
 .section_cv span {
   color: #d68da2;
   margin-left: 10px;
-}
-
-.section_cv .fa-right-long {
-  font-size: 1.7rem;
 }
 
 .section_cv button {
